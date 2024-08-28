@@ -5,6 +5,8 @@ import HomePage from './pages/HomePage';
 import Layout from './components/Layout';
 import TourDetailsPage from './pages/TourDetailsPage';
 import './App.css';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 const router = createBrowserRouter([
 	{
@@ -25,7 +27,9 @@ const router = createBrowserRouter([
 
 const App = () => (
 	<ThemeProvider theme={theme}>
-		<RouterProvider router={router}></RouterProvider>
+		<LocalizationProvider dateAdapter={AdapterDayjs}>
+			<RouterProvider router={router} />
+		</LocalizationProvider>
 	</ThemeProvider>
 );
 

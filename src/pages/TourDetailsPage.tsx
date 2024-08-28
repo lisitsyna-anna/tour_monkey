@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import ImageCollage from '../components/ImageCollage';
 import AboutTourSection from '../components/AboutTourSection';
 import AskedQuestionsSection from '../components/AskedQuestionsSection/AskedQuestionsSection';
+import BottomNav from '../components/BottomNav';
 import cities from '../data.json';
 
 const TourDetailsPage = () => {
@@ -39,11 +40,13 @@ const TourDetailsPage = () => {
 					flexDirection: 'column',
 					gap: 3,
 					marginTop: 3,
+					marginBottom: 10,
 				}}
 			>
 				<AboutTourSection aboutText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, rerum culpa laboriosam esse est maiores deleniti nisi enim explicabo dolorem obcaecati quisquam quo repudiandae maxime tenetur veritatis, vel dicta, vitae eaque aspernatur ea laudantium. Id quos consequatur itaque aspernatur voluptatibus!" />
 				<AskedQuestionsSection />
 			</Box>
+			<BottomNav />
 		</Container>
 	);
 };
