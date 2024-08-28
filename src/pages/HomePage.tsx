@@ -5,7 +5,7 @@ import cities from '../data.json';
 const HomePage = () => (
 	<Container sx={{ marginY: 5 }}>
 		{cities.map((city) => (
-			<>
+			<div key={city.id}>
 				<Typography variant="h4" component="h4" marginTop={5} marginBottom={3}>
 					Top {city.name} Tours
 				</Typography>
@@ -14,7 +14,7 @@ const HomePage = () => (
 						<TourCard key={tour.id} {...tour} />
 					))}
 				</Grid2>
-			</>
+			</div>
 		))}
 	</Container>
 );

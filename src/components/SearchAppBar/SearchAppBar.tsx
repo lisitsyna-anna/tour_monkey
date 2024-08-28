@@ -10,6 +10,7 @@ import {
 	SearchIconWrapper,
 	StyledInputBase,
 } from './SearchAppBar.styles';
+import { Link } from 'react-router-dom';
 
 const SearchAppBar = () => (
 	<Box sx={{ flexGrow: 1 }}>
@@ -24,14 +25,25 @@ const SearchAppBar = () => (
 				>
 					<MenuIcon />
 				</IconButton>
-				<Typography
-					variant="h6"
-					noWrap
-					component="div"
-					sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+				<Link
+					to="/"
+					style={{
+						textDecoration: 'none',
+						color: 'inherit',
+						display: 'block',
+						width: '100%',
+					}}
 				>
-					TOURMONKEY
-				</Typography>
+					<Typography
+						variant="h6"
+						noWrap
+						component="div"
+						sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+					>
+						TOURMONKEY
+					</Typography>
+				</Link>
+
 				<Search>
 					<SearchIconWrapper>
 						<SearchIcon />
